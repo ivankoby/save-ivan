@@ -374,3 +374,9 @@ div.ribbons p {
 	padding: 20px 0;
 	font-weight: normal;
 }
+.copyright.disclaimer {
+	padding-top: 0;
+	font-style: italic;
+	opacity: 0.8;
+	font-size: 12px;
+}
