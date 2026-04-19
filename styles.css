@@ -5,6 +5,27 @@
 	font-display: swap;
 	src: url('assets/fonts/ComicSansMS.woff2') format('woff2');
 }
+@font-face {
+	font-family: 'Comic Sans MS';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('assets/fonts/ComicSansMS-Bold.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Comic Sans MS';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url('assets/fonts/ComicSansMS-Italic.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Comic Sans MS';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url('assets/fonts/ComicSansMS-BoldItalic.woff2') format('woff2');
+}
 
 html {
 	background: #1ba11a;
