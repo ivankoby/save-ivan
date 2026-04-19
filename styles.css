@@ -1,0 +1,347 @@
+html {
+	background: #1ba11a;
+}
+body {
+	background: transparent;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	position: relative;
+}
+
+body::before {
+	content: "";
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	background: url('assets/stars-tile.svg') top left repeat;
+	filter: blur(1.3px) saturate(1.1);
+	z-index: -1;
+	pointer-events: none;
+}
+
+/* псевдо-jpeg: лёгкое размытие + усиление контраста/насыщенности */
+.lofi {
+	filter: blur(0.6px) saturate(1.15) contrast(1.08);
+	image-rendering: auto;
+}
+.lofi-strong {
+	filter: blur(0.9px) saturate(1.2) contrast(1.1);
+}
+.lofi-shakal {
+	filter: blur(1.4px) saturate(1.35) contrast(1.25);
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+ul li {
+	display: block;
+}
+
+img {
+	border: none;
+}
+
+#ivan-container {
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	width: 965px;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+#ivan-container h1 {
+	color: #FFF;
+	font-family: Times, "Times New Roman", serif;
+	font-size: 112px;
+	margin: 0;
+	padding-top: 12px;
+	line-height: 1;
+	text-shadow: 3px 3px 0 rgba(0,0,0,0.25);
+}
+
+#ivan-container h3 {
+	font-size: 40px;
+	font-weight: normal;
+	margin: 0;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+#ivan-container p {
+	font-weight: bold;
+	margin: 1em 50px;
+	line-height: 1.2em;
+	text-align: left;
+}
+
+#ivan-container p.middle {
+	text-align: center;
+}
+
+#ivan-container ul#second_row {
+	margin: 42px 0;
+	gap: 36px;
+}
+
+#ivan-container ul#fourth_row {
+	margin: 40px 0;
+	gap: 60px;
+}
+
+#ivan-container #donate-container {
+	margin: 40px 0;
+}
+
+.white { color: #FFF; }
+.yellow { color: #fff54f; }
+.dark-yellow { color: #ffe107; }
+
+.small-copy { font-size: 21px; }
+.medium-copy { font-size: 25px; }
+.large-copy { font-size: 42px; line-height: 1.15em; }
+
+/* ---- фото-плейсхолдеры ---- */
+.photo-placeholder {
+	background:
+		repeating-linear-gradient(45deg,
+			#3a3a3a 0, #3a3a3a 14px,
+			#4a4a4a 14px, #4a4a4a 28px);
+	border: 6px solid #FFF;
+	box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+	color: #fff54f;
+	font-family: "Comic Sans MS", cursive;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: 0.08em;
+}
+.photo-placeholder.big { width: 500px; height: 340px; margin: 20px auto; font-size: 28px; }
+.photo-placeholder.small { width: 240px; height: 200px; font-size: 20px; }
+.photo-placeholder.med { width: 174px; height: 240px; font-size: 22px; }
+.photo-placeholder.wide { width: 700px; height: 280px; margin: 20px auto; font-size: 24px; }
+
+/* ---- реальные фото ---- */
+.photo-img {
+	border: 4px solid #FFF;
+	display: block;
+	width: auto;
+	filter: blur(0.7px) saturate(1.1) contrast(1.05);
+}
+.photo-img.big   { height: 400px; margin: 20px auto; }
+.photo-img.small { height: 280px; }
+.photo-img.wide  { height: 300px; margin: 20px auto; }
+.photo-img.med   { height: 240px; border: none; }
+
+/* ---- ленточки по краям строки ---- */
+div.ribbons {
+	position: relative;
+	padding: 30px 0 10px;
+	min-height: 140px;
+}
+div.ribbons::before,
+div.ribbons::after {
+	content: "";
+	position: absolute;
+	top: 20px;
+	width: 95px;
+	height: 130px;
+	background: url('assets/white-ribbon.svg') center / contain no-repeat;
+	filter: blur(1.2px) saturate(1.05) contrast(1.05);
+	pointer-events: none;
+}
+div.ribbons::before {
+	left: 110px;
+}
+div.ribbons::after {
+	right: 110px;
+	transform: scaleX(-1);
+}
+div.ribbons p {
+	margin: 0;
+	position: relative;
+	z-index: 1;
+}
+
+/* ---- баннер ---- */
+#banner-container {
+	margin: 30px 0;
+	display: flex;
+	justify-content: center;
+}
+.fake-banner {
+	background: linear-gradient(180deg, #ff9a30 0%, #ff7a10 55%, #e65800 100%);
+	padding: 22px 60px 18px;
+	width: 780px;
+	max-width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+	border-top: 1px solid rgba(255,255,255,0.2);
+}
+.banner-main {
+	font-family: "Impact", "Arial Black", "Helvetica", sans-serif;
+	font-style: italic;
+	font-size: 72px;
+	font-weight: bold;
+	color: #fff54f;
+	letter-spacing: 0.01em;
+	line-height: 1;
+	-webkit-text-stroke: 1px #000;
+	text-shadow:
+		2px 2px 0 #000,
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000;
+}
+.banner-divider {
+	width: 90%;
+	height: 3px;
+	background: #fff54f;
+	margin: 10px 0 8px;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.4);
+}
+.banner-sub {
+	font-family: "Arial", "Helvetica", sans-serif;
+	font-size: 22px;
+	color: #000;
+	font-weight: bold;
+	letter-spacing: 0.01em;
+}
+
+/* ---- кнопка ---- */
+#donate-container {
+	display: flex;
+	justify-content: center;
+}
+.donate-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none;
+	width: 340px;
+	height: 150px;
+	border-radius: 14px;
+	background:
+		radial-gradient(circle at 50% 0%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 15%),
+		linear-gradient(180deg, #ff2a2a 0%, #c50000 55%, #7a0000 100%);
+	border: 3px solid #ffffff;
+	outline: 2px solid #3a0000;
+	box-shadow:
+		inset 0 2px 0 rgba(255,255,255,0.4),
+		inset 0 -10px 20px rgba(0,0,0,0.35),
+		0 10px 20px rgba(0,0,0,0.5);
+	color: #ffffff;
+	font-family: "Times", "Times New Roman", serif;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 1.1;
+	letter-spacing: 0.02em;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.7);
+	padding: 10px 20px;
+	position: relative;
+}
+.donate-button::before {
+	content: "";
+	position: absolute;
+	top: 6px; left: 6px; right: 6px;
+	height: 40%;
+	border-radius: 8px 8px 40% 40% / 8px 8px 80% 80%;
+	background: linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 100%);
+	pointer-events: none;
+}
+
+/* ---- счётчик (odometer) ---- */
+#donations-so-far {
+	background: #000;
+	width: 840px;
+	max-width: 100%;
+	margin: 30px auto 10px;
+	padding: 22px 8px 28px;
+	box-sizing: border-box;
+	text-align: center;
+}
+#donations-so-far .big-title {
+	font-family: "Comic Sans MS", cursive;
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 4px 0 14px;
+	letter-spacing: 0.03em;
+}
+#donations-so-far .sub-title {
+	font-family: "Comic Sans MS", cursive;
+	color: #fff54f;
+	font-size: 24px;
+	font-weight: bold;
+	margin: 4px 0 14px;
+}
+.odometer {
+	display: inline-flex;
+	gap: 0;
+	padding: 2px;
+	background: #222;
+	border: 1px solid #555;
+	border-radius: 2px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+	filter: blur(0.8px) saturate(1.1) contrast(1.05);
+}
+.odometer .digit {
+	width: 28px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Courier New", "Courier", monospace;
+	font-weight: bold;
+	font-size: 26px;
+	color: #111;
+	border-right: 1px solid #444;
+	background:
+		linear-gradient(180deg,
+			#6a6a78 0%,
+			#b8b8c4 20%,
+			#f0f0f5 50%,
+			#b8b8c4 80%,
+			#6a6a78 100%);
+	text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+	position: relative;
+}
+.odometer .digit:last-child {
+	border-right: none;
+}
+.odometer .digit::before {
+	content: "";
+	position: absolute;
+	top: 0; left: 0; right: 0;
+	height: 8px;
+	background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0));
+	pointer-events: none;
+}
+.odometer .digit::after {
+	content: "";
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	height: 8px;
+	background: linear-gradient(0deg, rgba(0,0,0,0.35), rgba(0,0,0,0));
+	pointer-events: none;
+}
+
+.copyright {
+	text-align: center;
+	font-size: 14px;
+	padding: 20px 0;
+	font-weight: normal;
+}

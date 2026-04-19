@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="140" viewBox="0 0 90 140">
+  <defs>
+    <linearGradient id="rb-l" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d8d8d8"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#b8b8b8"/>
+    </linearGradient>
+  </defs>
+  <!-- верхняя петля -->
+  <path d="M 45 10
+           C 18 10, 10 40, 28 55
+           L 42 62
+           L 50 50
+           L 38 42
+           C 28 36, 32 22, 45 22
+           Z"
+        fill="url(#rb-l)" stroke="#888" stroke-width="0.8"/>
+  <!-- правый нижний конец (перекрещивается) -->
+  <path d="M 50 50 L 75 130 L 60 132 L 38 56 Z"
+        fill="url(#rb-l)" stroke="#888" stroke-width="0.8"/>
+  <!-- левый нижний конец -->
+  <path d="M 42 62 L 20 130 L 36 134 L 55 66 Z"
+        fill="url(#rb-l)" stroke="#888" stroke-width="0.8"/>
+</svg>
